@@ -7,8 +7,8 @@ dotEnv.config();
 const app = express();
 app.use(bodyParser.json());
 
-app.listen(process.env.PORT, () => {
-  console.log(`server started at http://localhost:${process.env.PORT}`);
+app.listen(process.env.EXPRESS_PORT, () => {
+  console.log(`server started at http://localhost:${process.env.EXPRESS_PORT}`);
 });
 
 app.get('/', (req, res) => {
