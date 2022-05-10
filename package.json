@@ -37,6 +37,7 @@
   },
   "_moduleAliases": {
     "@infra": "build/infra",
-    "@domain": "build/domain"
+    "@domain": "build/domain",
+    "@application": "build/application"
   }
 }
