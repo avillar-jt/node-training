@@ -13,6 +13,7 @@ export const createDataSource = async (): Promise<DataSource> => {
     entities: [
       UserEntity
     ],
+    synchronize: true
   })
 
   conn = await PostgresDataSource.initialize()
