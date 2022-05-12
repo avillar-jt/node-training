@@ -1,10 +1,13 @@
 import { User } from '@domain/users/model'
 import { createUserUsecase } from '@application/users/usecases/createUser.usecase'
+import { findUsersUsecase } from '@application/users/usecases/findUsers.usecase'
 import UserDb from '@infra/secondary-outputs/type-orm/repositories/user.datasource';
 
-const findAllUsers = ((req: any, res: any) => {
+const findAllUsers = (async (req: any, res: any) => {
   const params = req.params
-  res.json({'prueba': 'prueba'})
+  const userRepository = new UserDb()
+  const users : User[] = await findUsersUsecase(userRepository)
+  res.json(users)
 })
 
 const createUser = (async (req: any, res: any) => {
