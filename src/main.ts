@@ -3,7 +3,7 @@ import { createServer } from '@infra/primary-inputs/express.server'
 import { createDataSource } from '@infra/secondary-outputs/type-orm/type-orm.db'
 import { initiateContext } from '@infra/shared/awilix/context-manager'
 
-import dotEnv from 'dotenv';
+import dotEnv from 'dotenv'
 
 //env context
 dotEnv.config();
